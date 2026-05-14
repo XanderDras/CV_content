@@ -1,0 +1,305 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.3, 10 May 2020) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+% (v1.7.1b, 11 Jan 2024) forked by Nicolás Omar González Passerino (nicolas.passerino@gmail.com)
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+%% Fork (before v1.6.5a): CV dark mode toggle enabler to use a inverted color palette.
+%% Use the "darkmode" option if you want a color palette used to 
+% \documentclass[10pt,a4paper,ragged2e,withhyper,darkmode]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 and academicons fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+%% Fork v1.6.5c: Overwriting sloppy environment to ignore any spaces and be used to solve overlapping cvtags
+\newenvironment{sloppypar*}{\sloppy\ignorespaces}{\par}
+
+% Change the page layout if you need to
+\geometry{left=1.2cm,right=1.2cm,top=1cm,bottom=1cm,columnsep=0.75cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Fork (before v1.6.5a): Change the color codes to test your personal variant on any mode
+\ifdarkmode%
+    \definecolor{PrimaryColor}{HTML}{0A2540}   % Deep aerospace blue
+    \definecolor{SecondaryColor}{HTML}{1F4E79} % Lighter blue accents
+    \definecolor{ThirdColor}{HTML}{FF7A00}     % Accent orange (small highlights)
+    \definecolor{BodyColor}{HTML}{333333}      % Main text
+    \definecolor{EmphasisColor}{HTML}{111111}  % Strong text
+    \definecolor{BackgroundColor}{HTML}{FFFFFF} % White background
+\else%
+  \definecolor{PrimaryColor}{HTML}{001F5A} % other blue shit important
+  \definecolor{SecondaryColor}{HTML}{0039AC} % blue shit important
+  \definecolor{ThirdColor}{HTML}{000000} % lines
+  \definecolor{BodyColor}{HTML}{666666} % body text
+  \definecolor{EmphasisColor}{HTML}{000000} % titles
+  \definecolor{BackgroundColor}{HTML}{FFFFFF}
+\fi%
+
+\colorlet{name}{PrimaryColor}
+\colorlet{tagline}{SecondaryColor}
+\colorlet{heading}{PrimaryColor}
+\colorlet{headingrule}{ThirdColor}
+\colorlet{subheading}{SecondaryColor}
+\colorlet{accent}{SecondaryColor}
+\colorlet{emphasis}{EmphasisColor}
+\colorlet{body}{BodyColor}
+\pagecolor{BackgroundColor}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\small\bfseries}
+\renewcommand{\cvsectionfont}{\Large\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+%% \addbibresource{main.bib}
+
+\begin{document}
+    \name{Martim Silva}
+    \tagline{Software, Telecommunications \& Computer Engineering Student | Team Leader in CubeSat, Robotics, and Software Projects }
+    
+    %% You can add multiple photos on the left or right
+    \photoL{4cm}{AI_good_face}
+
+    \personalinfo{
+        \email{Martim.Alexandre.Dras@gmail.com}\smallskip
+        \phone{+351-936-495-912}
+        \location{Lisbon, Portugal}\\
+        \linkedin{martim-silva-tech-dev/}
+        \github{XanderDras}
+        
+        %\homepage{nicolasomar.me}
+        %\medium{nicolasomar}
+        %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+        % \orcid{0000-0000-0000-0000}
+        %% You can add your own arbtrary detail with
+        %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+        % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+        %% Or you can declare your own field with
+        %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+        % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+        % \gitlab{your_id}
+    }
+    
+    \makecvheader
+    %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+    % \AtBeginEnvironment{itemize}{\small}
+    
+    %% Set the left/right column width ratio to 6:4.
+    \columnratio{0.22}
+
+    % Start a 2-column paracol. Both the left and right columns will automatically
+    % break across pages if things get too long.
+    \begin{paracol}{2}
+        % ----- TECH STACK -----
+        \cvsection{SKILL STACK}
+            %% Fork v1.6.5c: The sloppypar* environment is used to avoid tags overlapping with section width
+            \begin{sloppypar*}
+                %% Fork 1.7.1b: Now in case you want to highlight any tag, just add a '/true' property next to its text and it will change tag's text and border colors.
+                \cvtags{Team Leadership/true, CubeSat Design/true, Robotics/true, Embedded Systems/true, Python/true, C++/true, JavaScript/true, Node.js, Raspberry Pi, OpenCV, OOP, Git, Linux}
+                \medskip
+
+            \end{sloppypar*}
+        % ----- TECH STACK -----
+        
+        % ----- LEARNING -----
+        %\cvsection{Learning}
+         %   \begin{sloppypar*}
+         %       \cvtags{Uno, Dos/true, Tres, Cuatro/true, Cinco, Seis/true, Siete, Ocho/true, Nueve, Diez/true}
+         %       \medskip
+
+         %       \cvtags{Rojo/true, Amarillo, Azul/true, Verde, Violeta/true, Naranja, Marron/true, Blanco, Gris/true, Negro}
+        %    \end{sloppypar*}
+        % ----- LEARNING -----
+        
+        % ----- LANGUAGES -----
+        \cvsection{Languages}
+            \cvlang{English}{C2}\\
+            \divider
+            
+            \cvlang{Portuguese}{Native}
+            \bigskip
+            %% Yeah I didn't spend too much time making all the
+            %% spacing consistent... sorry. Use \smallskip, \medskip,
+            %% \bigskip, \vpsace etc to make ajustments.
+        % ----- LANGUAGES -----
+
+       % ----- EDUCATION -----
+        \cvsection{Education}
+        
+        \textbf{BSc Software, Telecommunications \& Computer Engineering}\\
+        \smallskip
+        Instituto Superior de Engenharia de Lisboa (ISEL)\\
+        \smallskip
+        Sep 2023 -- Jul 2026
+        
+        \divider
+        
+        \textbf{Vocational Course in Information Systems Management and Programming}\\
+        \smallskip
+        Escola Secundária Gago Coutinho\\
+        \smallskip
+        2020 -- 2023\\
+        Student Excellence Award – Municipality of Vila Franca de Xira
+        % ----- EDUCATION -----
+            
+        % ----- REFERENCES -----
+        \cvsection{References}
+            \cvref{Prof.\ Rui Duarte}{ISEL}{}
+            \divider
+
+            \cvref{Boss\ Paulo Gouveia}{YEPKIT}{}
+        % ----- REFERENCES -----
+        
+        
+        % ----- MOST PROUD -----
+        % \cvsection{Most Proud of}
+        
+        % \cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}\\
+        % \divider
+        % \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}\\
+        % \divider
+        % \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+        % ----- MOST PROUD -----
+        
+        % \cvsection{A Day of My Life}
+        
+        % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+        % \wheelchart{outer radius}{inner radius}{
+        % comma-separated list of value/text width/color/detail}
+        % \wheelchart{1.5cm}{0.5cm}{%
+        %   6/8em/accent!30/{Sleep,\\beautiful sleep},
+        %   3/8em/accent!40/Hopeful novelist by night,
+        %   8/8em/accent!60/Daytime job,
+        %   2/10em/accent/Sports and relaxation,
+        %   5/6em/accent!20/Spending time with family
+        % }
+        
+        % use ONLY \newpage if you want to force a page break for
+        % ONLY the current column
+        \newpage
+        
+        %% Switch to the right column. This will now automatically move to the second
+        %% page if the content is too long.
+        \switchcolumn
+        
+        % ----- ABOUT ME -----
+        \cvsection{About Me}
+            \begin{quote}
+            Award-winning engineering student with hands-on experience in CubeSat and robotics competitions, leading multidisciplinary teams to deliver high-impact projects. Skilled in software development with measurable results in international and national competitions.
+            \end{quote}
+        % ----- ABOUT ME -----
+
+        % ----- PROJECTS -----
+        \cvsection{Engineering Projects}
+            \cvevent{PocketQube – Modular COTS Satellite Platform}{Academic Engineering Project}{Mar 2026 -- Jul 2026 (ONGOING)}{ISEL}
+            \begin{itemize}
+            \item Low-cost modular Pocket satellite platform using commercial off-the-shelf components.
+            \item Developing satellite subsystems including power management, ESP32-C3, and RF communications (433 MHz).
+            \item Implementing embedded firmware with FreeRTOS for telemetry acquisition and transmission.
+            \end{itemize}
+            
+            \cvevent{Smart Car – Web-Controlled IoT Project}{\cvreference}{Jan 2023 -- Jul 2023}{}
+            \begin{itemize}
+                \item Developed web-controllable smart car using Raspberry Pi and WebSockets, providing live video feed via OpenCV.
+                \item Designed a custom API for real-time telemetry and control.
+            \end{itemize}
+            
+            %\cvevent{Project 2 }{\cvreference{\faGitlab}{https://gitlab.com/user/repo}\cvreference{| \faGlobe}{https://project-demo.com/}}{Mm YYYY -- Mm YYYY}{}
+            %\begin{itemize}
+            %    \item Item 1
+            %    \item Item 2
+            %\end{itemize}
+        % ----- PROJECTS -----
+        
+        % ----- EXPERIENCE -----
+        \cvsection{Experience}
+            \cvevent{Software Developer}{YEPKIT}{May 2023 -- Jul 2023}{Portugal (Hybrid)}
+            \begin{itemize}
+                \item Developed backend services using Node.js and Docker.
+                \item Contributed to full-stack development and API design, enhancing system reliability.
+                \item Software engineering best practices including version control (Git) and modular design.
+            \end{itemize}
+            \divider
+            
+            \cvevent{Team Leader | CubeSat Portugal Bootcamp}{ISEL-Space Club}{April 2025}{Lisbon, Portugal}
+            \begin{itemize}
+                \item Led 30-member team in CubeSat design and integration, to deliver a prototype.
+                \item Coordinated embedded systems, communications, and mission planning with guidance from Portuguese Space Agency experts.
+                \item Strengthened team technical skills and collaboration across hardware and software.
+            \end{itemize}
+
+            \cvevent{Team Leader | Robotics Competitions}{Escola Secundária Gago Coutinho}{2022 -- 2023}{Portugal}
+            \begin{itemize}
+                \item Led teams to compete in International First Global Competition 2022 (Geneva, Switzerland), European RoboCup 2022, Festival Nacional da Robótica 2023, and CanSat 2022.
+                \item Designed and programmed autonomous robots using Arduino, Python, and OpenCV.
+                \item Oversaw project documentation, software versioning (Git), and cross-functional collaboration.
+            \end{itemize}
+        % ----- EXPERIENCE -----
+
+        
+        
+        % ----- EDUCATION -----
+        %\cvsection{Education}
+         %   \cvevent{BSc Computer Systems Networking and Telecommunications}{Instituto Superior de Engenharia de Lisboa (ISEL)}{Sep 2023 -- Jul 2026}{Lisbon, Portugal}
+         %   \begin{itemize}
+          %     \item Skills developed: GitHub, Assembly, Python, Embedded Systems, Robotics
+            %\end{itemize}
+           % \divider
+
+            
+           %\cvevent{Associate Degree in Computer Programming, Specific Applications}{Escola Secundária Gago Coutinho}{2020 -- Jul 2023}{Portugal}
+            %\begin{itemize}
+             %   \item Team Leader in International and national robotics competitions and CanSat 2022
+              %  \item Awarded Student Excellence by Municipal of Vila Franca de Xira
+            %\end{itemize}
+        % ----- EDUCATION -----
+        
+        
+    \end{paracol}
+\end{document}
