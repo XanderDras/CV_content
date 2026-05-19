@@ -32,13 +32,14 @@
     \definecolor{EmphasisColor}{HTML}{111111}
     \definecolor{BackgroundColor}{HTML}{FFFFFF}
 \else%
-  \definecolor{PrimaryColor}{HTML}{001F5A}
-  \definecolor{SecondaryColor}{HTML}{0039AC}
-  \definecolor{ThirdColor}{HTML}{000000}
-  \definecolor{BodyColor}{HTML}{666666}
-  \definecolor{EmphasisColor}{HTML}{000000}
+  \definecolor{PrimaryColor}{HTML}{111111} % name + headings
+  \definecolor{SecondaryColor}{HTML}{2563EB} % accent blue
+  \definecolor{ThirdColor}{HTML}{111111} % lines
+  \definecolor{BodyColor}{HTML}{555555} % body text
+  \definecolor{EmphasisColor}{HTML}{111111} % titles
   \definecolor{BackgroundColor}{HTML}{FFFFFF}
 \fi%
+
 
 \colorlet{name}{PrimaryColor}
 \colorlet{tagline}{SecondaryColor}
@@ -60,7 +61,7 @@
 
 \begin{document}
     \name{Martim Silva}
-    \tagline{Software, Telecommunications \& Computer Engineering Student | Network Automation, Cloud Infrastructure \& Real-Time Embedded Firmware}
+    \tagline{Informatics, Networks and Telecommunications Engineering Student | Network Automation, Cloud Infrastructure \& Embedded Systems}
 
     \photoL{4cm}{AI_good_face}
 
@@ -80,7 +81,7 @@
         % ----- TECH STACK -----
         \cvsection{SKILL STACK}
             \begin{sloppypar*}
-                \cvtags{Python/true, Ansible/true, Nokia SR Linux/true, ContainerLab, Multi-Vendor Networks/true, gNMI, OpenConfig YANG, Cloud Infrastructure/true, Docker, Linux, C/C++, FreeRTOS, Embedded Systems, Git, CI/CD}
+                \cvtags{Python/true, Ansible/true, Nokia SR Linux/true, ContainerLab, Multi-Vendor Networks/true, gNMI, YANG, Cloud Infrastructure/true, Docker, Linux, C/C++, FreeRTOS, Git}
                 \medskip
             \end{sloppypar*}
         % ----- TECH STACK -----
@@ -97,7 +98,7 @@
        % ----- EDUCATION -----
         \cvsection{Education}
 
-        \textbf{BSc Software, Telecommunications \& Computer Engineering}\\
+        \textbf{BSc Informatics, Networks and Telecommunications Engineering}\\
         \smallskip
         Instituto Superior de Engenharia de Lisboa (ISEL)\\
         \smallskip
@@ -128,24 +129,22 @@
         % ----- ABOUT ME -----
         \cvsection{About Me}
             \begin{quote}
-            Engineering student specialising in multi-vendor network automation and real-time embedded systems, with hands-on lab experience configuring Nokia SR Linux, Arista, and Mikrotik fabrics via Ansible, NAPALM, and gNMI streaming telemetry. Led multidisciplinary CubeSat and robotics teams delivering measurable results in national and international competitions.
+            Engineering student with hands-on experience in multi-vendor network automation and embedded systems, building Nokia SR Linux, Arista, and Mikrotik labs with Ansible and gNMI telemetry. Led multidisciplinary CubeSat and robotics teams in national and international competitions.
             \end{quote}
         % ----- ABOUT ME -----
 
         % ----- PROJECTS -----
         \cvsection{Engineering Projects}
-            \cvevent{Multi-Vendor Network Automation \& Streaming Telemetry}{Academic Engineering Project}{Mar 2026 -- Jul 2026 (ONGOING)}{ISEL}
+            \cvevent{Network Automation \& Orchestration Lab}{Academic Engineering Project – NetOps}{Apr 2026 -- Jun 2026 (ONGOING)}{ISEL}
             \begin{itemize}
-            \item Provisioned a multi-vendor ContainerLab fabric (Nokia SR Linux, Arista cEOS, Mikrotik RouterOS) and brought up a multi-area OSPF backbone across four sites.
-            \item Automated configuration and diagnostics with Ansible roles, Jinja2, NAPALM, and Netmiko, cutting manual provisioning effort by \textasciitilde70\%.
-            \item Built a gnmic + Prometheus + Grafana stack over gNMI (ON\_CHANGE), with a GitHub Actions CI/CD pipeline validating every change against a digital-twin lab before production rollout.
+            \item Provisioning a multi-vendor ContainerLab lab (Nokia SR Linux, Arista cEOS, Mikrotik RouterOS) with multi-area OSPF; automating configuration with Ansible, Jinja2, NAPALM, and Netmiko.
+            \item Building a gNMI + Prometheus + Grafana telemetry stack and a GitHub Actions CI/CD pipeline to test changes before rollout.
             \end{itemize}
 
             \cvevent{PocketQube – Modular COTS Satellite Platform}{Academic Engineering Project}{Mar 2026 -- Jul 2026 (ONGOING)}{ISEL}
             \begin{itemize}
-            \item Low-cost modular Pocket satellite platform built around commercial off-the-shelf components.
-            \item Developing satellite subsystems including power management, ESP32-C3, and 433 MHz RF communications.
-            \item Implementing FreeRTOS firmware in C for hard real-time telemetry acquisition, scheduling, and downlink.
+            \item Developing subsystems (power management, ESP32-C3, 433 MHz RF) for a modular COTS-based PocketQube satellite.
+            \item Implementing FreeRTOS firmware in C for real-time telemetry acquisition, scheduling, and downlink.
             \end{itemize}
         % ----- PROJECTS -----
 
@@ -153,24 +152,20 @@
         \cvsection{Experience}
             \cvevent{Software Developer}{YEPKIT}{May 2023 -- Jul 2023}{Portugal (Hybrid)}
             \begin{itemize}
-                \item Developed backend services in Node.js and containerised them with Docker, improving deployment consistency by \textasciitilde25\%.
-                \item Contributed to API design and full-stack delivery, raising release reliability across the codebase.
-                \item Applied modular design and Git-based version control to keep changes auditable and reviewable.
+                \item Developed backend services in Node.js, containerised with Docker; contributed to API design and full-stack delivery.
+                \item Applied modular design and Git-based version control across the codebase.
             \end{itemize}
             \divider
 
             \cvevent{Team Leader | CubeSat Portugal Bootcamp}{ISEL-Space Club}{April 2025}{Lisbon, Portugal}
             \begin{itemize}
-                \item Led a 30-member team in CubeSat design and integration, delivering a functional prototype.
-                \item Coordinated embedded systems, RF communications, and mission planning sub-teams under Portuguese Space Agency mentorship.
-                \item Drove cross-functional collaboration between hardware and software groups across the bootcamp.
+                \item Managed a 30-member team through CubeSat design and subsystem development, coordinating work across embedded systems, RF communications, and mission planning.
             \end{itemize}
 
             \cvevent{Team Leader | Robotics Competitions}{Escola Secundária Gago Coutinho}{2022 -- 2023}{Portugal}
             \begin{itemize}
-                \item Led teams at First Global 2022 (Geneva), European RoboCup 2022, Festival Nacional da Robótica 2023, and CanSat 2022.
+                \item Guided the portuguese team at the International First Global 2022 (Geneva), European RoboCup 2022, Robótica 2023, and CanSat 2022.
                 \item Designed and programmed autonomous robots using Arduino, C/C++, Python, and OpenCV.
-                \item Oversaw documentation, Git-based version control, and cross-functional coordination across software, electronics, and mechanics.
             \end{itemize}
         % ----- EXPERIENCE -----
 

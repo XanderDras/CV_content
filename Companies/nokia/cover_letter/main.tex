@@ -1,0 +1,163 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{tgpagella}
+\usepackage{multicol}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+
+\geometry{
+  a4paper,
+  left=10mm,
+  right=10mm,
+  bottom=13mm,
+  top=13mm
+}
+
+\pagestyle{empty}
+
+\newcommand{\firstname}{Martim}
+\newcommand{\lastname}{Silva}
+
+%%%%%%%%%%%%% Colors %%%%%%%%%%%%%
+
+\definecolor{nokiaBlue}{HTML}{2563EB}
+\definecolor{grayShy}{RGB}{153, 150, 142}
+
+\newcommand{\mainColor}{nokiaBlue}
+
+%%%%%%%%%%%%% Spaces %%%%%%%%%%%%%
+
+\newlength{\spacebox}
+\settowidth{\spacebox}{123456789}
+
+% Horizontal %
+
+\newcommand{\xhspace}{\hspace*{0.1em}}
+\newcommand{\shspace}{\hspace*{0.8em}}
+
+% Vertical %
+
+\newcommand{\xvspace}{\vspace*{0.1em}}
+\newcommand{\svspace}{\vspace*{0.5em}}
+\newcommand{\mvspace}{\vspace*{1.5em}}
+\newcommand{\hvspace}{\vspace*{2.5em}}
+
+\newcommand{\negxvspace}{\vspace*{-0.2em}}
+\newcommand{\negsvspace}{\vspace*{-0.5em}}
+\newcommand{\negmvspace}{\vspace*{-1em}}
+\newcommand{\neghvspace}{\vspace*{-1.5em}}
+
+%%% Personal Details Macro %%%
+
+\newcommand{\userInfo}[4]{
+    \begin{flushleft}
+        \color{\mainColor}
+        \Huge
+        \textbf{\MakeUppercase{\lastname}}
+        \color{black}
+        \textbf{\firstname}
+        \color{\mainColor}
+        \noindent\rule{19.1cm}{0.8pt}
+        \color{grayShy}
+        \small
+        \par
+        \parbox{7\spacebox} {
+            \faMap \shspace #1 - #2 \par \svspace
+            \faPhone \shspace #3 \par \svspace
+            \faEnvelopeOpen \shspace \texttt{#4} \par \svspace
+        }
+        \color{\mainColor}
+        \mvspace
+    \end{flushleft}
+    \negmvspace
+}
+
+%%% Company Details Macro %%%
+
+\newcommand{\companyInfo}[4]{
+    \begin{flushright}
+        \parbox{4\spacebox}{
+            \raggedleft
+            \small
+            \textbf{\today}\par
+            \xvspace
+            \textbf{#1}\par
+            \mvspace
+            \color{grayShy} \textsc{\MakeLowercase{#2}}\par
+            \xvspace
+            \textsc{\MakeLowercase{#3}}\par
+            \xvspace
+            \textsc{\MakeLowercase{#4}}\par
+            \color{black}
+        }
+    \end{flushright}
+    \hvspace
+}
+
+%%% RE Macro %%%
+
+\newcommand{\object}[1]{
+    \small
+    \color{\mainColor} \textbf{RE :} \color{black} \textbf{#1} \par
+}
+
+%%% Content Macro %%%
+
+\newcommand{\content}[2]{
+    \mvspace
+    \begin{flushleft}
+        \parbox{10.3\spacebox}{
+          #1\par
+          \svspace
+          #2
+        }\par
+    \end{flushleft}
+}
+
+%%% Signature Macro %%%
+
+\newcommand{\signature}{
+    \svspace
+    \parbox{3\spacebox}{
+      Sincerely,\par
+      \svspace \hspace{-0.3em}
+      \textbf{\color{\mainColor} \firstname\ \MakeUppercase{\lastname}}\par
+      \svspace \svspace
+      \Huge \faPenNib\par
+    }\par
+}
+
+%%%%%%%%%%%% Cover Letter %%%%%%%%%%%%
+
+\begin{document}
+\fontfamily{phv}\selectfont
+\userInfo{Lisbon}{Portugal}{+351 936 495 912}{Martim.Alexandre.Dras@gmail.com}
+\companyInfo{Nokia}{Talent Acquisition Team}{Amadora}{Portugal}
+\object{Cloud Infrastructure Trainee -- Portugal (Hybrid)}
+\content{
+  Dear Nokia Talent Acquisition Team, \\
+
+  I am applying for the Cloud Infrastructure Trainee position in Nokia Portugal. The importance
+  of Nokia's contribution to next-generation telecom infrastructure is relevant to my academic
+  curriculum, and I am eager to join a team that is working to develop innovative cloud and
+  automation solutions. \\
+
+  Through my studies at ISEL, I have gained practical exposure to the technologies required
+  for this position. As part of my Network Automation and Orchestration course, I deployed
+  and automated a multi-vendor lab environment with \textbf{Nokia SR Linux}, Arista cEOS,
+  and Mikrotik RouterOS using \textbf{Ansible}, Jinja2 templates, NAPALM, and Netmiko.
+  This project allowed me to familiarize myself with Nokia's network OS and the
+  template-based onboarding process mentioned in this job description. I expanded upon this
+  by building a telemetry system using \textbf{gNMI}, Prometheus, and Grafana metrics,
+  combined with a GitHub Actions CI/CD pipeline for validating changes before deployment.
+  Simultaneously, I am creating embedded firmware for a PocketQube satellite using FreeRTOS
+  and Python. \\
+
+  I am currently located in Lisbon, available to begin immediately, and am flexible working
+  in a hybrid environment. It would be my pleasure to discuss how my qualifications align
+  with this position. \\
+}{Sincerely,}
+\signature
+\end{document}
