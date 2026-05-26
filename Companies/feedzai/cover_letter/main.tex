@@ -22,22 +22,18 @@
 
 %%%%%%%%%%%%% Colors %%%%%%%%%%%%%
 
-\definecolor{nokiaBlue}{HTML}{2563EB}
+\definecolor{feedzaiRed}{HTML}{C8102E}
 \definecolor{grayShy}{RGB}{153, 150, 142}
 
-\newcommand{\mainColor}{nokiaBlue}
+\newcommand{\mainColor}{feedzaiRed}
 
 %%%%%%%%%%%%% Spaces %%%%%%%%%%%%%
 
 \newlength{\spacebox}
 \settowidth{\spacebox}{123456789}
 
-% Horizontal %
-
 \newcommand{\xhspace}{\hspace*{0.1em}}
 \newcommand{\shspace}{\hspace*{0.8em}}
-
-% Vertical %
 
 \newcommand{\xvspace}{\vspace*{0.1em}}
 \newcommand{\svspace}{\vspace*{0.5em}}
@@ -48,8 +44,6 @@
 \newcommand{\negsvspace}{\vspace*{-0.5em}}
 \newcommand{\negmvspace}{\vspace*{-1em}}
 \newcommand{\neghvspace}{\vspace*{-1.5em}}
-
-%%% Personal Details Macro %%%
 
 \newcommand{\userInfo}[4]{
     \begin{flushleft}
@@ -74,8 +68,6 @@
     \negmvspace
 }
 
-%%% Company Details Macro %%%
-
 \newcommand{\companyInfo}[4]{
     \begin{flushright}
         \parbox{4\spacebox}{
@@ -96,14 +88,10 @@
     \hvspace
 }
 
-%%% RE Macro %%%
-
 \newcommand{\object}[1]{
     \small
     \color{\mainColor} \textbf{RE :} \color{black} \textbf{#1} \par
 }
-
-%%% Content Macro %%%
 
 \newcommand{\content}[2]{
     \mvspace
@@ -115,8 +103,6 @@
         }\par
     \end{flushleft}
 }
-
-%%% Signature Macro %%%
 
 \newcommand{\signature}{
     \svspace
@@ -134,33 +120,31 @@
 \begin{document}
 \fontfamily{phv}\selectfont
 \userInfo{Lisbon}{Portugal}{+351 936 495 912}{Martim.Alexandre.Dras@gmail.com}
-\companyInfo{Nokia}{Talent Acquisition Team}{Optical Networks}{Portugal}
-\object{FW Development Engineer -- L0 (Optical Networks)}
+\companyInfo{Feedzai}{Hiring Team}{Risk Engine Platform}{Portugal}
+\object{Software Engineer -- Product (Risk Engine)}
 \content{
-  The Nokia Talent Acquisition Team, \\
+  Dear Feedzai Hiring Team, \\
 
-  I'm reaching out regarding the FW Development Engineer (L0) position at Nokia
-  Optical Networks. \\
+  I am writing regarding the Software Engineer position on the Risk Engine team.
+  Real-time fraud detection running on distributed, cloud-native infrastructure
+  under strict latency constraints is exactly the kind of engineering I want to
+  grow into, and Feedzai's reputation for engineering excellence and the
+  ``you build it, you run it'' ownership mindset is what draws me to this team. \\
 
-  Designing firmware for hardware-software interface problems, like dealing with
-  peripherals, interrupts, real-time considerations, and power management, is what
-  I've wanted to engineer my whole life, and the hardware-aware and end-to-end
-  mentality described in this job perfectly fits my approach. \\
+  My experience comes from adjacent domains. My ongoing Network Automation lab at
+  ISEL is a multi-vendor \textbf{distributed} environment orchestrated in
+  \textbf{Python} with Ansible and \textbf{ContainerLab}, instrumented with a
+  gNMI + \textbf{Prometheus} + Grafana observability stack and a GitHub Actions
+  \textbf{CI/CD} pipeline -- end-to-end ownership from code to deployment. At
+  YEPKIT, I developed and containerised \textbf{backend} services in \textbf{Node.js}
+  with \textbf{Docker}, contributing to REST API design and modular structure. In
+  parallel, my PocketQube satellite project has me writing real-time
+  \textbf{C/C++} firmware under hard latency constraints, sharpening the systems
+  thinking that translates to high-performance backend work. \\
 
-  For instance, in my ongoing work on a PocketQube satellite at ISEL, I design and
-  develop firmware in \textbf{FreeRTOS} running on \textbf{C} for a specific embedded
-  SoC by coding hardware drivers via \textbf{I2C}, \textbf{SPI}, \textbf{UART}, and
-  \textbf{GPIO} interfaces for controlling sensors and a 433~MHz RF module. I manage
-  real-time tasks scheduling, interrupts, power management including batteries
-  operation and sleep modes, and build firmware with \textbf{ESP-IDF} toolchain
-  cross-compiling tools. This comes after three years' worth of practical experience
-  in firmware coding in C and C++ for Arduino microcontrollers in international
-  robotic projects (First Global Geneva, European RoboCup, CanSat, Robótica),
-  including interrupt-driven sensing-control-actuation loops. \\
-
-  I'm available immediately and currently live in Lisbon. I would be delighted to
-  learn about how I can use my experience and curiosity about low-level system
-  architecture in Nokia Optical Networks. \\
+  I am based in Lisbon and available to begin immediately. I would welcome the
+  opportunity to discuss how my background, curiosity, and trajectory can fit
+  Feedzai's team. \\
 }{Sincerely,}
 \signature
 \end{document}

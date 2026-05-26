@@ -32,12 +32,8 @@
 \newlength{\spacebox}
 \settowidth{\spacebox}{123456789}
 
-% Horizontal %
-
 \newcommand{\xhspace}{\hspace*{0.1em}}
 \newcommand{\shspace}{\hspace*{0.8em}}
-
-% Vertical %
 
 \newcommand{\xvspace}{\vspace*{0.1em}}
 \newcommand{\svspace}{\vspace*{0.5em}}
@@ -48,8 +44,6 @@
 \newcommand{\negsvspace}{\vspace*{-0.5em}}
 \newcommand{\negmvspace}{\vspace*{-1em}}
 \newcommand{\neghvspace}{\vspace*{-1.5em}}
-
-%%% Personal Details Macro %%%
 
 \newcommand{\userInfo}[4]{
     \begin{flushleft}
@@ -74,8 +68,6 @@
     \negmvspace
 }
 
-%%% Company Details Macro %%%
-
 \newcommand{\companyInfo}[4]{
     \begin{flushright}
         \parbox{4\spacebox}{
@@ -96,14 +88,10 @@
     \hvspace
 }
 
-%%% RE Macro %%%
-
 \newcommand{\object}[1]{
     \small
     \color{\mainColor} \textbf{RE :} \color{black} \textbf{#1} \par
 }
-
-%%% Content Macro %%%
 
 \newcommand{\content}[2]{
     \mvspace
@@ -115,8 +103,6 @@
         }\par
     \end{flushleft}
 }
-
-%%% Signature Macro %%%
 
 \newcommand{\signature}{
     \svspace
@@ -134,33 +120,28 @@
 \begin{document}
 \fontfamily{phv}\selectfont
 \userInfo{Lisbon}{Portugal}{+351 936 495 912}{Martim.Alexandre.Dras@gmail.com}
-\companyInfo{Nokia}{Talent Acquisition Team}{Optical Networks}{Portugal}
-\object{FW Development Engineer -- L0 (Optical Networks)}
+\companyInfo{Nokia}{Talent Acquisition Team}{MN RAN R\&D BBSoC}{Portugal}
+\object{Software Engineer -- Cloud RAN / BBSoC}
 \content{
-  The Nokia Talent Acquisition Team, \\
+  Nokia Talent Acquisition Team, \\
 
-  I'm reaching out regarding the FW Development Engineer (L0) position at Nokia
-  Optical Networks. \\
+  Regarding the Software Engineer position with Nokia's MN RAN R\&D BBSoC Unit,
+  Cloud RAN represents an intersection between performance-critical embedded
+  software and cutting-edge cloud technologies which is precisely the type of
+  engineering I'm trying to specialize in, making me interested in joining this
+  particular team thanks to Nokia's leading position in the field. I have
+  experience working at each end of that stack. For my current work on the
+  PocketQube satellite I'm developing a \textbf{FreeRTOS} firmware using
+  \textbf{C/C++} programming language in an embedded SoC where I design peripheral
+  drivers as well as deal with real-time scheduling and interrupts, and power.
+  Additionally, I'm designing a multi-vendor \textbf{ContainerLab} environment
+  made of Nokia SR Linux, Arista cEOS, and Mikrotik all automated using
+  \textbf{Python} and Ansible, with a telemetry stack consisting of \textbf{gNMI},
+  \textbf{Prometheus}, and \textbf{Grafana}, plus a GitHub Actions pipeline. I
+  gained production experience at my internship at YEPKIT in terms of containers
+  running backend services using \textbf{Docker} and Git for code reviews. \\
 
-  Designing firmware for hardware-software interface problems, like dealing with
-  peripherals, interrupts, real-time considerations, and power management, is what
-  I've wanted to engineer my whole life, and the hardware-aware and end-to-end
-  mentality described in this job perfectly fits my approach. \\
-
-  For instance, in my ongoing work on a PocketQube satellite at ISEL, I design and
-  develop firmware in \textbf{FreeRTOS} running on \textbf{C} for a specific embedded
-  SoC by coding hardware drivers via \textbf{I2C}, \textbf{SPI}, \textbf{UART}, and
-  \textbf{GPIO} interfaces for controlling sensors and a 433~MHz RF module. I manage
-  real-time tasks scheduling, interrupts, power management including batteries
-  operation and sleep modes, and build firmware with \textbf{ESP-IDF} toolchain
-  cross-compiling tools. This comes after three years' worth of practical experience
-  in firmware coding in C and C++ for Arduino microcontrollers in international
-  robotic projects (First Global Geneva, European RoboCup, CanSat, Robótica),
-  including interrupt-driven sensing-control-actuation loops. \\
-
-  I'm available immediately and currently live in Lisbon. I would be delighted to
-  learn about how I can use my experience and curiosity about low-level system
-  architecture in Nokia Optical Networks. \\
+  I live in Lisbon and am ready to start immediately. \\
 }{Sincerely,}
 \signature
 \end{document}
